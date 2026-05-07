@@ -1,5 +1,9 @@
 # pylcp-nist
 
+## Start Here
+
+**Main research paper:** [`paper/ResearchPaper.pdf`](paper/ResearchPaper.pdf)
+
 `pylcp-nist` is a Python toolkit for modeling laser cooling and trapping physics. It provides building blocks for atomic states, laser beams, magnetic fields, Hamiltonians, rate-equation simulations, optical Bloch equation simulations, and trajectory integration.
 
 This repo is research-oriented and notebook-heavy. The examples are the best place to see how the pieces fit together for molasses, magneto-optical traps, optical pumping, magnetic traps, and related laser-cooling workflows.
@@ -13,17 +17,27 @@ This repo is research-oriented and notebook-heavy. The examples are the best pla
 - Integration tools for force profiles and particle motion.
 - Example notebooks for basic systems, MOTs, molasses, magnetic traps, and laser fields.
 - A PDF/manual-style document under `doc/`.
+- The main research paper under `paper/ResearchPaper.pdf`.
+- Research notebooks, scripts, generated plots, and sweep data under `scripts/`.
 
 ## Project Structure
 
+The Python files in the repo root are the core package modules. They look like loose scripts, but they are the library source that notebooks and examples import.
+
 - `atom.py` - atomic species, states, and transition properties.
+- `common.py` - shared constants and helper utilities.
 - `fields.py` - laser beam and magnetic field definitions.
+- `gratings.py` - laser grating helpers.
 - `hamiltonian.py` and `hamiltonians/` - Hamiltonian construction helpers.
+- `heuristiceq.py` - heuristic equation tools.
 - `rateeq.py` - rate-equation simulation tools.
 - `obe.py` - optical Bloch equation simulation tools.
 - `integration_tools.py` - helpers for integrating trajectories and dynamics.
+- `tools.py` - shared math and simulation helper functions.
 - `examples/` - notebooks and scripts showing common simulation workflows.
 - `doc/` - LaTeX/PDF documentation and generated figures.
+- `paper/` - the main research paper PDF.
+- `scripts/` - project-specific research scripts, notebooks, plots, and sweep data.
 
 ## Setup
 
@@ -46,6 +60,8 @@ Some notebooks may need additional scientific Python packages depending on the e
 
 ## Where To Start
 
+For the research writeup, start with `paper/ResearchPaper.pdf`.
+
 Start with the notebooks in:
 
 - `examples/basics/`
@@ -56,4 +72,4 @@ Those examples show the package at a practical level without needing to read thr
 
 ## Notes
 
-The code appears to be an in-progress research fork, so paths, notebooks, and examples may be more useful than a polished package interface. For deeper background, see `doc/pylcp.pdf`.
+The code appears to be an in-progress research fork, so paths, notebooks, and examples may be more useful than a polished package interface. For deeper background on the underlying package, see `doc/pylcp.pdf`. For the current research work and supporting artifacts, see `paper/ResearchPaper.pdf` and `scripts/README.md`.

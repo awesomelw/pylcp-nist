@@ -136,3 +136,7 @@ dmypy.json
 .DS_Store
 *.fls
 *.pkl
+
+# Generated research outputs
+scripts/**/CSVConsoleSweeps/
+scripts/**/previous_outputs_*/
